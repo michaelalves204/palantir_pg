@@ -1,0 +1,6 @@
+.rake_tasks~
+lib/config
+palantir.log
+.rubocop.yml
+Gemfile.lock
+.byebug_history

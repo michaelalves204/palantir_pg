@@ -1,0 +1,17 @@
+Available Commands (Aliases)
+
+Each alias runs a Rake task from your Palantir Ruby app.
+Alias	Description	Required Params (if any)
+palantir_create_database	Register a new database	dbname, username, password, host (optionally port, sslmode) via ENV
+palantir_database	Show the current selected database	—
+palantir_databases	List all configured databases	—
+palantir_delete_query	Delete a named SQL query	query_name via ENV
+palantir_edit_query	Edit a query file	query_name via ENV
+palantir_functions	List database functions	—
+palantir_logo	Display the Palantir logo	—
+palantir_logs	Display application logs	—
+palantir_queries	List saved queries for current DB	—
+palantir_query	Execute a saved query	query_name via ENV
+palantir_set_database	Set active database for the session	database_name via ENV
+palantir_tables	List all database tables	—
+palantir_views	List all database views	—
