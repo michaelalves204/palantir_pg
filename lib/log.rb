@@ -6,12 +6,12 @@ class Log
   NOT_FOUND_MESSAGE = "not found"
   MISSING_MANDATORY_MESSAGE = "Missing mandatory parameters: "
   COLORS = {
-    info: "\e[32m", # verde
-    error: "\e[31m", # vermelho
-    warn: "\e[33m", # amarelo
-    debug: "\e[34m", # azul
-    fatal: "\e[35m", # roxo
-    unknown: "\e[37m" # branco
+    info: "\e[32m",
+    error: "\e[31m",
+    warn: "\e[33m",
+    debug: "\e[34m",
+    fatal: "\e[35m",
+    unknown: "\e[37m"
   }.freeze
 
   RESET = "\e[0m"
