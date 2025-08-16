@@ -44,6 +44,9 @@ namespace :palantir do
 
       editor = ENV["EDITOR"] || "vi"
       system("#{editor} #{path}")
+
+      query = File.read(path)
+      Palantir.new(config["database"]).execute("query", query)
     end
   end
 
@@ -72,6 +75,22 @@ namespace :palantir do
         else
           Log.new.call(self.class, :info, query)
           Palantir.new(config["database"]).execute("query", query)
+        end
+      else
+        Log.new.call(self.class, :info, CHOOSE_DATABASE_MESSAGE)
+      end
+    end
+  end
+
+  task :show do
+    with_query_name(USE_COMMAND_PALANTIR_QUERY_MESSAGE) do |name|
+      if File.exist?("lib/config/config.json")
+        query = Service::FileUtils::Queries.new(config["database"]).show(name)
+
+        if query.nil?
+          Log.new.call(self.class, :error, Log::NOT_FOUND_MESSAGE)
+        else
+          puts query
         end
       else
         Log.new.call(self.class, :info, CHOOSE_DATABASE_MESSAGE)

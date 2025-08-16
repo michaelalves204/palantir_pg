@@ -12,6 +12,7 @@ palantir_logo	Display the Palantir logo	—
 palantir_logs	Display application logs	—
 palantir_queries	List saved queries for current DB	—
 palantir_query	Execute a saved query	query_name via ENV
+palantir_show	Show a query	query_name via ENV
 palantir_set_database	Set active database for the session	database_name via ENV
 palantir_tables	List all database tables	—
 palantir_views	List all database views	—

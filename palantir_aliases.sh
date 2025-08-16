@@ -11,6 +11,7 @@ echo "alias palantir_logo='cd ~/palantir_pg && rake palantir:logo'" >> ~/.bashrc
 echo "alias palantir_logs='cd ~/palantir_pg && rake palantir:logs'" >> ~/.bashrc
 echo "alias palantir_queries='cd ~/palantir_pg && rake palantir:queries'" >> ~/.bashrc
 echo "alias palantir_query='cd ~/palantir_pg && rake palantir:query'" >> ~/.bashrc
+echo "alias palantir_show='cd ~/palantir_pg && rake palantir:show'" >> ~/.bashrc
 echo "alias palantir_set_database='cd ~/palantir_pg && rake palantir:set_database'" >> ~/.bashrc
 echo "alias palantir_tables='cd ~/palantir_pg && rake palantir:tables'" >> ~/.bashrc
 echo "alias palantir_views='cd ~/palantir_pg && rake palantir:views'" >> ~/.bashrc

@@ -1,13 +1,13 @@
 # frozen_string_literal: true
 
-require 'json'
-require 'fileutils'
-require_relative '../../log'
+require "json"
+require "fileutils"
+require_relative "../../log"
 
 module Service
   module Databases
     class Create
-      DATABASE_PATH = 'lib/config/databases'
+      DATABASE_PATH = "lib/config/databases"
 
       def initialize(dbname:, username:, password:, port:, host:, sslmode:)
         @dbname = dbname
@@ -21,12 +21,12 @@ module Service
       def create
         ::FileUtils.mkdir_p(DATABASE_PATH)
 
-        File.open("#{DATABASE_PATH}/#{@dbname}.json", 'w') do |file|
+        File.open("#{DATABASE_PATH}/#{@dbname}.json", "w") do |file|
           file.puts JSON.pretty_generate(content)
         end
 
         true
-      rescue StandardError => e
+      rescue => e
         Log.new.call(self.class.name, :error, e.message)
       end
 

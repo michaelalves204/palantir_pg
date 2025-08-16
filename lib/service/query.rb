@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 require_relative "../log"
-require 'byebug'
 
 module Service
   class Query
