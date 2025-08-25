@@ -50,7 +50,7 @@ rake palantir:create_database dbname=postgres username=postgres password=postgre
 Set the database for use by specifying its name:
 
 ```bash
-palantir_set_database database_name=postgres
+palantir_set_database postgres
 ```
 
 ### 3. Verify Database Configuration
@@ -70,7 +70,7 @@ Once the database is configured, you can create, edit, and execute SQL queries.
 Use the following command to create or edit a query. By default, Palantir uses `vi` as the editor. To use a different editor (e.g., `code`), set the `EDITOR` environment variable.
 
 ```bash
-palantir_edit_query query_name=create_palantir_test
+palantir_edit_query create_palantir_test
 ```
 
 Example query:
@@ -80,14 +80,6 @@ CREATE TABLE palantir_tests (
   id SERIAL PRIMARY KEY,
   description VARCHAR(255)
 );
-```
-
-### Executing a Query
-
-Run a query by specifying its name:
-
-```bash
-palantir_query query_name=create_palantir_test
 ```
 
 ### Listing Queries
@@ -103,7 +95,7 @@ palantir_queries
 Create a query to insert records into the table:
 
 ```bash
-palantir_edit_query query_name=add_registers_in_palantir_tests
+palantir_edit_query add_registers_in_palantir_tests
 ```
 
 Example query:
@@ -114,18 +106,12 @@ INSERT INTO palantir_tests (description) VALUES
   ('Second description');
 ```
 
-Execute the query:
-
-```bash
-palantir_query query_name=add_registers_in_palantir_tests
-```
-
 ### Example: Retrieving Records
 
 Create a query to select records:
 
 ```bash
-palantir_edit_query query_name=palantir_tests
+palantir_edit_query palantir_tests
 ```
 
 Example query:
@@ -137,7 +123,7 @@ SELECT * FROM palantir_tests;
 Execute the query:
 
 ```bash
-palantir_query query_name=palantir_tests
+palantir_query palantir_tests
 ```
 
 ## Additional Resources

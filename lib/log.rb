@@ -28,8 +28,6 @@ class Log
     return if type.nil? || message.nil? || klass.nil?
     return unless COLORS.include?(type.to_sym)
 
-    message = "#{klass} - #{message}"
-
     puts message
 
     @logger.send(type, message)
